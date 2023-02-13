@@ -1,0 +1,397 @@
+.tonal a:hover {
+    border-bottom: 3px solid red;
+}
+
+
+
+header {
+      width: 100%;
+      height: 20vh;
+      position: sticky;
+
+
+}
+
+.content {
+      width: 94%;
+      margin: 4em auto;
+      font-size: 20px;
+      line-height: 30px;
+      text-align: justify;
+}
+
+.logo {
+      line-height: 60px;
+      position: fixed;
+      float: left;
+      margin: 16px 46px;
+      color: #fff;
+      font-weight: bold;
+      font-size: 20px;
+      letter-spacing: 2px;
+}
+
+nav {
+      position: fixed;
+      width: 100%;
+      line-height: 60px;
+}
+
+nav ul {
+      line-height: 60px;
+      list-style: none;
+      background: rgba(0, 0, 0, 0);
+      overflow: hidden;
+      color: #fff;
+      padding: 0;
+      text-align: right;
+      margin: 0;
+      padding-right: 40px;
+      transition: 1s;
+}
+
+
+nav.black ul {
+      background: #000;
+}
+
+nav ul li {
+      display: inline-block;
+      padding: 16px 40px;;
+}
+
+nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+}
+
+.menu-icon {
+      line-height: 60px;
+      width: 100%;
+      background: #000;
+      text-align: right;
+      box-sizing: border-box;
+      padding: 15px 24px;
+      cursor: pointer;
+      color: #fff;
+      display: none;
+}
+
+@media(max-width: 786px) {
+
+      .logo {
+            position: fixed;
+            top: 0;
+            margin-top: 16px;
+      }
+
+      nav ul {
+            max-height: 0px;
+            background: #000;
+      }
+
+      nav.black ul {
+            background: #000;
+      }
+
+      .showing {
+            max-height: 34em;
+      }
+
+      nav ul li {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 24px;
+            text-align: center;
+      }
+
+      .menu-icon {
+            display: block;
+      }
+
+}
+.wrapper {
+  margin: 0 auto;
+  font-family: monospace;
+  width: 800px;
+
+  /* Center vertically and horizontally */
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+</style>
+
+body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #E1BEE7;
+    background-repeat: no-repeat
+}
+
+.card {
+    position : left;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px 0px #AA00FF;
+    margin-top: 50px;
+    margin-bottom: 50px
+    height: 50%;
+}
+
+.set-p {
+    padding-left: 15px;
+    padding-right: 15px
+}
+
+.fa-angle-left,
+.fa-angle-right {
+    position: absolute;
+    color: #757575;
+    font-size: 80px;
+    top: 100px;
+    cursor: pointer
+}
+
+#left {
+    left: 2%
+}
+
+#left:hover {
+    color: #E0E0E0
+}
+
+#right {
+    right: 2%
+}
+
+#right:hover {
+    color: #E0E0E0
+}
+
+.image {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: none
+}
+
+.image.active {
+    display: block
+}
+
+.rating {
+    background-color: #3D5AFE;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px
+}
+
+.grade {
+    font-size: 18px
+}
+
+.line {
+    height: 1px;
+    background-color: #E0E0E0
+}
+
+.text-sm {
+    font-size: 14px
+}
+
+body {
+    background: url('https://www.eubuscoimoveis.com.br/noticias/smaniottoimoveis/392/27415377.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+    padding-right: 30px;
+    padding-left:  30px;
+}
+
+.shoppingCart{
+    background: cornflowerblue;
+    background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        margin-right: auto;
+        margin-left:  auto;
+        padding-right: 30px;
+        padding-left:  30px;
+}
+
+
+
+
+
+.cazareRomania {
+    background: url('https://www.wallpapertip.com/wmimgs/51-516241_transfgr-an.jpg');
+    background-repeat:no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+            margin-right: auto;
+            margin-left:  auto;
+            padding-right: 30px;
+            padding-left:  30px
+}
+
+.cityBreak {
+    background: url('https://www.wallpapertip.com/wmimgs/5-51525_london-bridge-wallpaper-4k.jpg');
+    background-repeat:no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+            margin-right: auto;
+            margin-left:  auto;
+            padding-right: 30px;
+            padding-left:  30px
+}
+
+.contact {
+    background: url('https://www.wallpapertip.com/wmimgs/165-1655011_phone-booth-at-beach.jpg');
+    background-repeat:no-repeat;
+            body text="#ffffff"
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+            margin-right: auto;
+            margin-left:  auto;
+            padding-right: 30px;
+            padding-left:  30px
+
+}
+
+.despreNoi {
+    background: url('https://www.wallpapertip.com/wmimgs/9-98006_book-desktop-wallpapers-hd-desktop-wallpaper-hd-books.jpg');
+    background-repeat:no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            width: 100%;
+            height: 100%;
+            background-size: 100%;
+            margin-right: auto;
+            margin-left:  auto;
+            padding-right: 30px;
+            padding-left:  30px
+}
+
+.termeniSiConditii {
+    background: url('https://www.wallpapertip.com/wmimgs/227-2279361_pen-wallpaper-5-5616-x-3744-stmednet.jpg');
+    background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        margin-right: 0px;
+        margin-left:  0px;
+        padding-right: 30px;
+        padding-left:  30px;
+
+
+}
+
+.login-page {
+    .divider:after,
+    .divider:before {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #eee;
+
+    }
+
+.btn btn-primary btn-lg btn-block {
+    margin-left:auto;
+    margin-right:auto;
+    width: 100px;
+}
+
+.promotii {
+    background: url('https://www.wallpapertip.com/wmimgs/34-347600_-.jpg');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+    padding-right: 30px;
+    padding-left:  30px;
+}
+
+.continent {
+    background: url('');
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: 100%;
+    margin-right: auto;
+    margin-left:  auto;
+    padding-right: 30px;
+    padding-left:  30px;
+    }
+
+#footer {
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-button: 0px;
+}
+
+.tourOfferList{
+    background: url('');
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: 100%;
+        margin-right: auto;
+        margin-left:  auto;
+        padding-right: 30px;
+        padding-left:  30px;
+}
+
+
+}
+
+
+
+

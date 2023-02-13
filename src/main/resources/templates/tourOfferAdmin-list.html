@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>TourOffer</title>
+    <link th:rel="stylesheet" th:href="@{/assets/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css}"/>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} "/>
+</head>
+<body class="tourOfferList">
+<div th:replace="fragments/navbar :: navbar"/>
+
+<div align="center">
+    <h1>Tour Offer list</h1>
+
+    <a th:href="@{/tourOfferAdmin/add}">Create tour offer</a>
+
+        <table class="table table-sm">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Continent</th>
+                <th>Country</th>
+                <th>City</th>
+                <th>Travel Option</th>
+                <th>Airport</th>
+                <th>Hotel</th>
+                <th>Departure date</th>
+                <th>Date of return</th>
+                <th>Number of days</th>
+                <th>Type of service</th>
+                <th>Type of rooms</th>
+                <th>Price for an adult</th>
+                <th>Price for a child</th>
+                <th>Star Rating</th>
+                <th>Stock</th>
+
+
+
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr th:each="tourOfferAdmin : ${tourOfferInView}">
+                <td th:text="${tourOfferAdmin.name}"></td>
+                <td th:text="${tourOfferAdmin.continent.name}"></td>
+                <td th:text="${tourOfferAdmin.country.name}"></td>
+                <td th:text="${tourOfferAdmin.city.name}"></td>
+                <td th:text="${tourOfferAdmin.travelOption}"></td>
+                <td th:text="${tourOfferAdmin.airport.name}"></td>
+                <td th:text="${tourOfferAdmin.hotel.name}"></td>
+                <td th:text="${tourOfferAdmin.departureDate}"></td>
+                <td th:text="${tourOfferAdmin.dateOfReturn}"></td>
+                <td th:text="${tourOfferAdmin.numberOfDays}"></td>
+                <td th:text="${tourOfferAdmin.typeOfService}"></td>
+                <td th:text="${tourOfferAdmin.typeOfRooms}"></td>
+                <td th:text="${tourOfferAdmin.priceForAnAdult}"></td>
+                <td th:text="${tourOfferAdmin.priceForAChild}"></td>
+                <td th:text="${tourOfferAdmin.starRating}"></td>
+                <td th:text="${tourOfferAdmin.stock}"></td>
+
+                <td>
+                    <div class="actions">
+                        <a th:href="@{/tourOfferAdmin/{id}/edit(id = ${tourOfferAdmin.id})}">Edit</a>
+                        <a th:href="@{/tourOfferAdmin/{id}/delete(id = ${tourOfferAdmin.id})}">Delete</a>
+                    </div>
+
+                </td>
+
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+
+<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+<script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{/assets/moment/moment.min.js}"></script>
+<script th:src="@{/assets/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.js}"></script>
+<div th:replace="fragments/footer :: footer"/>
+<div th:replace="fragments/footer-css :: footer-css"/>
+</body>
+</html>

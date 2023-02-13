@@ -1,0 +1,237 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" type="text/css"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body class="exotice">
+<div th:replace="fragments/navbar :: navbar"/>
+</div>
+
+<div class="container">
+    <div class="hotel-card bg-white rounded-lg shadow overflow-hidden d-block d-lg-flex">
+        <div class="hotel-card_images">
+            <div id="bootstrapCarousell" class="carousel slide h-100" data-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <img src="images/island-escape-by-burasari.jpg" class="d-block w-100" alt="Hotel Image">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#bootstrapCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#bootstrapCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="hotel-card_info p-4">
+            <div class="d-flex align-items-center mb-2">
+                <h5 class="mb-0 mr-2">Island Escape by Burasari</h5>
+
+                <div>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                </div>
+                <a href="#!" class="text-dark ml-auto"><i class="far fa-heart fa-lg"></i></a>
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+                <div class="hotel-card_details">
+                    <div class="text-muted mb-2">
+                        <i class="fas fa-map-marker-alt"></i> Phuket
+                    </div>
+                    <div class="amnities d-flex mb-3">
+                        <img class="mr-2" src="images/icons/desk-bell.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Desk bell" data-original-title="Desk bell">
+                        <img class="mr-2" src="images/icons/single-bed.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Single Bed" data-original-title="Single Bed">
+                        <img class="mr-2" src="images/icons/towels.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Towels" data-original-title="Towels">
+                        <img class="mr-2" src="images/icons/wifi.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Wifi" data-original-title="Wifi">
+                        <img class="mr-2" src="images/icons/breakfast.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Breakfast" data-original-title="Breakfast">
+
+                    </div>
+                    <ul class="hotel-checklist pl-0 mb-0">
+                        <li><i class="fa fa-check text-success"></i> Island Escape by Burasari oferă un restaurant, o piscină în aer liber, un bar și o grădină în orașul Phuket. Acest complex de 5 stele are WiFi gratuit, o zonă de plajă privată și un club al copiilor. La cazare există recepție cu program non-stop, room-service și schimb valutar pentru oaspeți,</li>
+                    </ul>
+                </div>
+                <div class="hotel-card_pricing text-center">
+                    <h3>€ 1400</h3>
+
+                    <button class="btn btn-primary">Buy</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="hotel-card bg-white rounded-lg shadow overflow-hidden d-block d-lg-flex">
+        <div class="hotel-card_images">
+            <div id="bootstrapCarousel" class="carousel slide h-100" data-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <img src="images/riuPalaceCancun.jpg" class="d-block w-100" alt="Hotel Image">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#bootstrapCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#bootstrapCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="hotel-card_info p-4">
+            <div class="d-flex align-items-center mb-2">
+                <h5 class="mb-0 mr-2">Riu Palace Costa Mujeres </h5>
+                <div>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                </div>
+                <a href="#!" class="text-dark ml-auto"><i class="far fa-heart fa-lg"></i></a>
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+                <div class="hotel-card_details">
+                    <div class="text-muted mb-2">
+                        <i class="fas fa-map-marker-alt">Cancun / Mexic</i>
+                    </div>
+                    <div class="amnities d-flex mb-3">
+                        <img class="mr-2" src="images/icons/desk-bell.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Desk bell" data-original-title="Desk bell">
+                        <img class="mr-2" src="images/icons/single-bed.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Single Bed" data-original-title="Single Bed">
+                        <img class="mr-2" src="images/icons/towels.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Towels" data-original-title="Towels">
+                        <img class="mr-2" src="images/icons/wifi.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Wifi" data-original-title="Wifi">
+                        <img class="mr-2" src="images/icons/breakfast.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Breakfast" data-original-title="Breakfast">
+
+                    </div>
+                    <ul class="hotel-checklist pl-0 mb-0">
+                        <li><i class="fa fa-check text-success"></i> Situat în Cancún, la 16 km de Autogara Cancún, Riu Palace Costa Mujeres - All Inclusive oferă cazare cu piscină în aer liber, centru de fitness, bar și parcare privată gratuită. Facilitățile includ recepție cu program non-stop, room service și acces gratuit la internet WiFi în toate zonele proprietății. Oaspeții se pot distra la parcul acvatic, pot savura o băutură sau se pot relaxa într-un lounge comun.</li>
+
+                    </ul>
+                </div>
+                <div class="hotel-card_pricing text-center">
+                    <h3>€ 1200</h3>
+                </div>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<br>
+
+<div class="container">
+    <div class="hotel-card bg-white rounded-lg shadow overflow-hidden d-block d-lg-flex">
+        <div class="hotel-card_images">
+            <div id="bootstrapCarouselll" class="carousel slide h-100" data-ride="carousel">
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item h-100 active">
+                        <img src="images/BarosMaldives.jpeg" class="d-block w-100" alt="Hotel Image">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#bootstrapCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#bootstrapCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <div class="hotel-card_info p-4">
+            <div class="d-flex align-items-center mb-2">
+                <h5 class="mb-0 mr-2">Baros Maldives</h5>
+                <div>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                    <i class="fa fa-star text-warning"></i>
+                </div>
+                <a href="#!" class="text-dark ml-auto"><i class="far fa-heart fa-lg"></i></a>
+            </div>
+            <div class="d-flex justify-content-between align-items-end">
+                <div class="hotel-card_details">
+                    <div class="text-muted mb-2">
+                        <i class="fas fa-map-marker-alt"></i>Maldive
+                    </div>
+                    <div class="amnities d-flex mb-3">
+                        <img class="mr-2" src="images/icons/desk-bell.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Desk bell" data-original-title="Desk bell">
+                        <img class="mr-2" src="images/icons/single-bed.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Single Bed" data-original-title="Single Bed">
+                        <img class="mr-2" src="images/icons/towels.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Towels" data-original-title="Towels">
+                        <img class="mr-2" src="images/icons/wifi.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Wifi" data-original-title="Wifi">
+                        <img class="mr-2" src="images/icons/breakfast.svg" data-toggle="tooltip" data-placement="top"
+                             title="" alt="Breakfast" data-original-title="Breakfast">
+
+                    </div>
+                    <ul class="hotel-checklist pl-0 mb-0">
+                        <li><i class="fa fa-check text-success"></i>Baros Maldives se află pe o insulă mică, aproape de orașul Male, într-o lagună cu apă turcoaz, şi oferă vile retrase, la umbra palmierilor, lângă o plajă cu nisip alb, sau amplasate deasupra apei, cu terasă privată la soare. Multe dintre vilele elegante, cu gresie, lemn și acoperiș din palmieri au piscină de relaxare privată, iar unele au și cadă spa. Toate vilele sunt private şi includ aparat de cafea espresso, minibar și vin. Printre facilitățile de divertisment din vilă se numără TV cu ecran plat și stație de andocare pentru iPod. Oaspeții se pot răsfăța la spa sau pot face o baie în piscina infinită, situată deasupra apei. În plus, aceștia pot practica sporturi de apă și yoga. Complexul oferă un lounge cu bibliotecă și acces gratuit la internet WiFi în camere.</li>
+
+                    </ul>
+                </div>
+                <div class="hotel-card_pricing text-center">
+                    <h3>€ 1450</h3>
+                </div>
+                <button class="btn btn-primary">Buy</button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+.carousel-item h-100 active {
+height: 300px;
+widthL 400px;
+overflow: hidden;
+}
+.carousel-item h-100 active img {
+height: auto;
+width: 400px;
+}
+
+<!--<script src="https://code.jquery.com/jquery-3.6.0.js"></script>-->
+<!--<script src="//maxcdn.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.min.js"></script>-->
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+		$(function () {
+			$('[data-toggle="tooltip"]').tooltip()
+		})
+
+</script>
+
+<div th:replace="fragments/footer :: footer"/>
+<div th:replace="fragments/footer-css :: footer-css"/>
+</body>
+</html>

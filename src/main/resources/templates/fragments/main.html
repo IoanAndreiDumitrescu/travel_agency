@@ -1,0 +1,400 @@
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4ToUr</title>
+    <link th:rel="stylesheet" th:href="@{/assets/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.css}"/>
+    <link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.1.3/css/bootstrap.min.css} "/>
+    <link th:rel="stylesheet" th:href="@{/webjars/font-awesome/5.15.4/css/all.css} "/>
+    <link th:rel="stylesheet" th:href="@{/assets/select2_4.0.13/css/select2.css}"/>
+    <link th:rel="stylesheet" th:href="@{/assets/select2_4.0.13/css/select2.min.css}"/>
+    <link th:rel="stylesheet" th:href="@{/assets/select2-bootstrap-5-theme-master/dist/select2-bootstrap-5-theme.css}"/>
+
+</head>
+<body>
+<main>
+    <div class="wrapper">
+        <div class="container">
+            <div class="acqua-engine-classic-wrapper">
+                <form id="search-from-packages" action method="POST" th:object="${formObject}"
+                      th:action="@{/searchOffer}">
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label>Tip Transport</label>
+                            <div>
+                                <select th:field="*{travelOption}" class="form-select form-select-sm"
+                                        aria-label=".form-select-sm example">
+                                    <option th:each="travelOption: ${travelOption}"
+                                            th:text="${travelOption}"
+                                            th:value="${travelOption}">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class=" form-group col-md-6">
+                            <label for="departureDate">Departure Date</label>
+                            <div class="input-group date" id="datetimepicker1" data-target-input="nearest">
+                                <input type="text" class="form-control datetimepicker-input"
+                                       data-target="#datetimepicker1"
+                                       th:field="*{departureDate}" id="departureDate" placeholder="Date"/>
+                                <div class="input-group-append" data-target="#datetimepicker1"
+                                     data-toggle="datetimepicker">
+                                    <div class="input-group-text"><i class="fa fa-calendar-alt"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label>Orasul de destinatie</label>
+                            <div>
+                                <select th:field="*{city}" class="form-select form-select-sm"
+                                        aria-label=".form-select-sm example">
+                                    <option th:each="city : ${cities}"
+                                            th:text="${city.name}"
+                                            th:value="${city.id}">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label>Tara de destinatie</label>
+                            <div>
+                                <select th:field="*{country}" class="form-select from-select-sm"
+                                        aria-label=".form-select-sm example" id="countries_list">
+                                    <option th:each="country : ${countries}"
+                                            th:text="${country.name}"
+                                            th:value="${country.id}">
+                                    </option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mb-4" style="display:none">
+                        <label>Regiunea de destinatie</label>
+                        <div>
+                            <select id="test" class="placeholder">
+                            </select>
+                        </div>
+
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <label>Nopti</label>
+                            <div>
+                                <select th:field="*{numberOfDays}" class="form-select form-select-sm"
+                                        aria-label=".form-select-sm example">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <label>Camere</label>
+                            <div>
+                                <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                                    <option value="o camera">One</option>
+                                    <option value="doua camere">Two</option>
+                                    <option value="trei camere">Three</option>
+                                    <option value="patru camere">Four</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="package_search_room_1_container" class="row room-container" style="">
+                            <div class="col-sm-4 label-cell">
+                                <label>Camera</label>
+                                <div>
+                                    <select th:field="*{typeOfRooms}" class="form-select form-select-sm"
+                                            aria-label=".form-select-sm example">
+                                        <option th:each="typeOfRooms: ${typeOfRooms}"
+                                                th:text="${typeOfRooms}"
+                                                th:value="${typeOfRooms}">
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <label>Adulti</label>
+                                <select th:field="*{numberOfAdult}" class="form-select form-select-sm"
+                                        aria-label=".form-select-sm example">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-4 col-xs-6">
+                                <label>Copii</label>
+                                <select th:field="*{numberOfChildren}"
+                                        class="form-select form-select-sm"
+                                        aria-label=".form-select-sm example">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input is-invalid" type="checkbox" value=""
+                                   id="invalidCheck3" required>
+                            <label class="form-check-label" for="invalidCheck3">
+                                Agree to terms and conditions
+                            </label>
+                            <div class="invalid-feedback">
+                                You must agree before submitting.
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Cauta Oferte</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+    <div data-v-bd92c560 class="q-mt-xxl">
+        <div data-v-bd92c560 class="ct-frame-row">
+            <div data-v-bd92c560 class="col-xs-12 col-">
+                <div data-v-516dbc7b data-v-bd92c560>
+                    <div class="row gutter-md">
+                        <div class="col-xs-12 col-lg-4">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius:10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/snK0pzq3RPiAyPwOyjDpb1KKYJtv2pM6gf2Pu82g.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Vacante
+                                </div>
+                                <a th:href="@{/vacante}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-4">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius:10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/cJTrXWmoQrClKXIAoRlLk0EwV8z4Xa8zKbYiXA68.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Circuite
+                                </div>
+                                <a th:href="@{/circuite}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-lg-4"
+                             onclick="document.location.href='/pelerinaje-calatorii-pentru-suflet'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/koxY65V7pelJxArQAhH3P5lvmVABByK68OG50QaT.jpeg'); background-size: cover; background-position: 50% 50%; height: 210px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Revelion 2022
+                                </div>
+                                <a th:href="@{/revelion-2022}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div data-v-bd92c560="" class="q-mb-xxl q-mt-xl">
+        <div data-v-bd92c560="" class="ct-frame row">
+            <div data-v-bd92c560="" class="col-xs-12 col-md">
+                <div data-v-516dbc7b="" data-v-bd92c560="">
+                    <div class="row gutter-md">
+                        <div class="col-xs-12 col-lg-4" onclick="document.location.href='/programe-senior-voyage'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/nzyJi5UpNrk1Lr8T2ZWPQnKt4b8VLbCN8OBCxavG.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">senior voyage<br></div>
+                                <a th:href="@{/senior-voyage}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+
+
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-lg-4" onclick="document.location.href='/vacante-circuite-exotice'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/MCkzHsaJzkXQWrB7GCDB9YW4ZUnhejGOZ6bWFopS.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Charter exotic
+                                </div>
+                                <a th:href="@{/charter-exotic}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-lg-4" onclick="document.location.href='/oferte-cazare-hoteluri'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://api-gateway-assets.ams3.digitaloceanspaces.com/geography/mittersill.jpg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">SKI
+                                </div>
+                                <a th:href="@{/ski}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br>
+    <br>
+
+    <div data-v-bd92c560="" class="ct-frame q-mt-lg">
+        <div data-v-bd92c560="" class="ct-frame row"></div>
+    </div>
+
+    <div data-v-bd92c560="" class="q-my-xxl">
+        <div data-v-bd92c560="" class="ct-frame row">
+            <div data-v-bd92c560="" class="col-xs-12 col-md">
+                <div data-v-516dbc7b="" data-v-bd92c560="">
+                    <div class="row gutter-md">
+                        <div class="col-xs-12 col-lg-4" onclick="document.location.href='/vacante-circuite-exotice'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/WdnQ3gbliUTykwgalKVJWWcDZaqMzAyalTOOzXuw.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Exotice
+                                </div>
+                                <a th:href="@{/exotice}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-lg-4"
+                             onclick="document.location.href='https://citybreaks.christiantour.ro/bilete-de-avion/'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/alrBtFuQbQlC5Z0XNNlbJg3b9wAmkNJ2MKFlekBI.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Estivall
+                                </div>
+                                <a th:href="@{/estival}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-lg-4"
+                             onclick="document.location.href='/pelerinaje-calatorii-pentru-suflet'">
+                            <div class="q-pa-lg text-center cursor-pointer"
+                                 style="border-radius: 10px; background-color: #ebf1fb;">
+                                <div style="background-image: url('https://chr-static-obj.ams3.cdn.digitaloceanspaces.com/gallery/lbjybKbwNUnx3yoVmoZQqeqH4b11lReadb0WwPY1.jpeg'); background-size: cover; background-position: 50% 50%; height: 220px;"></div>
+                                <div class="text-menu-color q-my-lg"
+                                     style="text-transform: uppercase; font-size: 36px;">Craciun 2022
+                                </div>
+                                <a th:href="@{/craciun-2022}">
+                                    <button class="btn btn-primary" type="submit">Descopera Ofertele</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+    <script th:src="@{/webjars/popper.js/umd/popper.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+    <script th:src="@{/assets/moment/moment.min.js}"></script>
+    <script th:src="@{/assets/tempusdominus-bootstrap-4/tempusdominus-bootstrap-4.min.js}"></script>
+    <script th:src="@{/assets/select2_4.0.13/js/select2.full.js}"></script>
+    <script>
+
+$.fn.datetimepicker.Constructor.Default = $.extend({}, $.fn.datetimepicker.Constructor.Default, {
+    icons: {
+        time: 'far fa-clock',
+        date: 'far fa-calendar',
+        up: 'fas fa-arrow-up',
+        down: 'fas fa-arrow-down',
+        previous: 'fas fa-chevron-left',
+        next: 'fas fa-chevron-right',
+        today: 'far fa-calendar-check-o',
+        clear: 'far fa-trash',
+        close: 'far fa-times'
+    } });
+
+$('#datetimepicker1').datetimepicker({
+format: 'DD/MM/YYYY'
+});
+
+$('#test').select2({
+    placeholder: "Select an option",
+<!--    theme: "bootstrap-5",-->
+    theme: "classic",
+<!--    containerCssClass: "select2&#45;&#45;small", // For Select2 v4.0-->
+<!--    selectionCssClass: "select2&#45;&#45;small", // For Select2 v4.1-->
+<!--    dropdownCssClass: "select2&#45;&#45;small",-->
+    allowClear: true,
+    closeOnSelect: true,
+    ajax: {
+        url: function(){
+                return '/countries?q=' + $('#countries_list').val();
+                },
+<!--        '/countries?q=$('#countries_list').val()',-->
+        dataType: 'json',
+        delay: 250,
+        processResults: function(response) {
+            return {
+                results: response
+            };
+        }
+    }
+});
+
+
+
+
+
+
+    </script>
+
+</main>
+
+
+</body>
+</html>

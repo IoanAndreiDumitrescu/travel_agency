@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  display: block;
+  align-items: center;
+}
+
+.wrapper11 {
+  margin-top: 5%;
+  padding-right: 0;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  font-size: 16px;
+  line-height: 1.42857143;
+
+}
+
+
+
+.container11 {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: table;
+}
+
+.padtb20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.info-box authentication {
+  margin-left: 5%;
+  margin-right: 50%;
+  inline-size: 5vmax;
+  letter-spacing: 2px;
+  font-size: 16px;
+}
+
+lement.style {
+}
+@media (min-width: 768px)
+.col-sm-push-8 {
+    left: 66.66666667%;
+}
+
+@media (min-width: 768px)
+.col-sm-4 {
+    width: 33.33333333%;
+}
+@media (min-width: 768px)
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+    float: left;
+}
+
+.col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.acqua-booking-info .acqua-booking-info-section {
+    padding: 10px;
+    background-color: rgba(var(--bg-color),1);
+}
+.acqua-booking-info .acqua-booking-info-section .acqua-hotel-image {
+    margin-bottom: 5px;
+}
+.acqua-booking-info .acqua-booking-info-section .acqua-hotel-name {
+    font-weight: 700;
+    font-size: 16px;
+}
+.acqua-booking-info .acqua-booking-info-section .acqua-hotel-period {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    font-weight: 700;
+    border-bottom: 1px dashed #ccc;
+}
+@media (min-width: 768px)
+.col-sm-pull-4 {
+    right: 33.33333333%;
+}
+@media (min-width: 768px)
+.col-sm-8 {
+    width: 66.66666667%;
+}
+@media (min-width: 768px)
+.col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9 {
+    float: left;
+}
+
+@media (min-width: 768px)
+.container {
+    width: 100%;
+}
+.padtb20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.bg-container {
+    background-color: rgba(var(--light-color),1);
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+div {
+    display: block;
+}
+

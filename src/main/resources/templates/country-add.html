@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Create new country</title>
+</head>
+<body>
+<div th:replace="fragments/navbar :: navbar"/>
+<div align="center">
+    <h1>Create new country</h1>
+
+    <div>
+        <form method="post" th:action="@{/country/add}" th:object="${country}">
+
+            <div>
+                <label for="name">City Name</label>
+                <input id="name" th:field="*{name}" type="text">
+                <span th:if="${#fields.hasErrors('name')}" th:error="*{name}" class="text-danger"></span>
+            </div>
+
+            <div>
+                <label for="continent">Continent</label>
+                <select th:field="*{continent}" id="continent">
+                    <option th:each="continent : ${continents}"
+                            th:text="${continent.name}"
+                            th:value="${continent.id}">
+                    </option>
+                </select>
+            </div>
+
+            <div>
+                <a th:href="@{/country}">
+                    <button class="btn btn-secondary" id="cancel" name="cancel" type="submit">Cancel</button>
+                </a>
+                <button class="btn btn-primary" id="save" name="save" type="submit">Save</button>
+            </div>
+        </form>
+    </div>
+
+</div>
+<div th:replace="fragments/footer :: footer"/>
+<div th:replace="fragments/footer-css :: footer-css"/>
+</body>
+</html>
